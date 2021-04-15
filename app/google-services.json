@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "886123242052",
+    "project_id": "diabetes-72970",
+    "storage_bucket": "diabetes-72970.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886123242052:android:117b407cfcd023f193d211",
+        "android_client_info": {
+          "package_name": "com.example.diabetes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886123242052-lb6mn1aasuml23b3spm40jb4o9t2k016.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRbFPvm0iBDI2w7JBpHgmFjEp4UWfgvDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886123242052-lb6mn1aasuml23b3spm40jb4o9t2k016.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
