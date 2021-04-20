@@ -2,7 +2,10 @@ package com.example.diabetes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+
+import com.facebook.AccessToken;
 
 public class MainActivity extends AppCompatActivity {
 
