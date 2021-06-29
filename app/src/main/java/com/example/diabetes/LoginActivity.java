@@ -75,18 +75,14 @@ import java.util.Arrays;
             public void onSuccess(LoginResult loginResult) {
                 goMainScreen();
             }
-
             @Override
             public void onCancel() {
-
             }
-
             @Override
             public void onError(FacebookException error) {
                 Toast.makeText(LoginActivity.this, "Error", Toast.LENGTH_SHORT).show();
             }
         });
-
         btnFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,7 +95,6 @@ import java.util.Arrays;
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
-
     }
 
     public void changeStatusBarColor(){

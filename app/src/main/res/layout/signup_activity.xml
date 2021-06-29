@@ -60,9 +60,9 @@
                         android:layout_marginTop="@dimen/loginViewsMargin">
 
                         <EditText
-                            android:id="@+id/editTextName"
+                            android:id="@+id/reditTextName"
                             style="@style/modifiedEditText"
-                            android:hint="Nombre"
+                            android:hint="Nombre Completo"
                             android:inputType="textPersonName"
                             android:maxLines="1"/>
 
@@ -74,7 +74,7 @@
                         android:layout_marginTop="@dimen/loginViewsMargin">
 
                         <EditText
-                            android:id="@+id/editTextEmail"
+                            android:id="@+id/reditTextEmail"
                             style="@style/modifiedEditText"
                             android:hint="@string/login_email_hint"
                             android:inputType="textEmailAddress"
@@ -88,7 +88,7 @@
                         android:layout_marginTop="@dimen/loginViewsMargin">
 
                         <EditText
-                            android:id="@+id/editTextPassword"
+                            android:id="@+id/reditTextPassword"
                             style="@style/modifiedEditText"
                             android:hint="Constraseña"
                             android:inputType="textPassword"
@@ -102,7 +102,7 @@
                         android:layout_marginTop="@dimen/loginViewsMargin">
 
                         <EditText
-                            android:id="@+id/editTextRPassword"
+                            android:id="@+id/reditTextRpassword"
                             style="@style/modifiedEditText"
                             android:hint="Repetir constraseña"
                             android:inputType="textPassword"
