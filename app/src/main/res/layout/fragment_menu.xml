@@ -3,12 +3,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MenuFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Tercer fragment" />
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Configuración" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="#000"
+                        android:src="@drawable/ic_graph"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp">
+
+                    </de.hdodenhof.circleimageview.CircleImageView>
+
+                    <TextView
+                        android:id="@+id/usernameTextView"
+                        style="@style/viewParent.headerText"
+                        android:text="Sergio Gamero"
+                        android:textSize="18sp"
+                        android:layout_toRightOf="@id/profileImage"
+                        android:layout_marginTop="20dp"/>
+
+                    <TextView
+                        style="@style/viewParent.headerText"
+                        android:text="Editar datos personales"
+                        android:textSize="16sp"
+                        android:textColor="#5D5C5C"
+                        android:layout_below="@id/usernameTextView"
+                        android:layout_toRightOf="@id/profileImage"/>
+
+                    <ImageView
+                        style="@style/viewParent"
+                        android:src=""
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
 
 </FrameLayout>

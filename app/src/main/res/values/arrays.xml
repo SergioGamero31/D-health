@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notifications">
+        <item>Tomar agua</item>
+        <item>Tomar medicina</item>
+        <item>Hacer ejercicio</item>
+    </array>
+</resources>
