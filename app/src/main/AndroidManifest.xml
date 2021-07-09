@@ -43,7 +43,9 @@
 
 
         <activity android:name=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="com.example.MainActivity" />
                 <category android:name="android.intent.category.DEFAULT" />

@@ -35,8 +35,8 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         app:civ_border_width="2dp"
-                        app:civ_border_color="#000"
-                        android:src="@drawable/ic_graph"
+                        app:civ_border_color="#E01E7A"
+                        android:src="@drawable/ic_run"
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="10dp">
 
@@ -60,11 +60,17 @@
 
                     <ImageView
                         style="@style/viewParent"
-                        android:src=""
+                        android:src="@drawable/ic_more"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"/>
 
                 </RelativeLayout>
+
+                <Switch
+                    android:id="@+id/darkModeSwitch"
+                    style="@style/settingsText"
+                    android:drawableLeft="@drawable/ic__home"
+                    android:text="Modo Oscuro" />
 
             </LinearLayout>
 
