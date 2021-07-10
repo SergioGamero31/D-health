@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     ForumFragment forumFragment = new ForumFragment();
     MenuFragment menuFragment = new MenuFragment();
 
+    int newPosition = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        loadFragment(mainFragment);
+        loadFragment(mainFragment,0);
     }
 
     private final BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -38,23 +40,40 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()){
                 case R.id.mainFragment:
-                    loadFragment(mainFragment);
+                    loadFragment(mainFragment,0);
                     return true;
                 case R.id.forumFragment:
-                    loadFragment(forumFragment);
+                    loadFragment(forumFragment,1);
                     return true;
                 case R.id.menuFragment:
-                    loadFragment(menuFragment);
+                    loadFragment(menuFragment,2);
                     return true;
             }
             return false;
         }
     };
 
-    public void loadFragment(Fragment fragment){
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_container, fragment);
-        transaction.commit();
+    public void loadFragment(Fragment fragment, int newPosition){
+        if(fragment !=null) {
+            if (newPosition < 1) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.setCustomAnimations(R.anim.enter_left_right,R.anim.exit_left_right);
+                transaction.replace(R.id.frame_container, fragment);
+                transaction.commit();
+            }
+            if (newPosition == 1){
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.setCustomAnimations(R.anim.enter_right_left,R.anim.exit_right_left);
+                transaction.replace(R.id.frame_container, fragment);
+                transaction.commit();
+            }
+            if (newPosition > 1){
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.setCustomAnimations(R.anim.enter_right_left,R.anim.exit_left_right);
+                transaction.replace(R.id.frame_container, fragment);
+                transaction.commit();
+            }
+        }
     }
 
     /*public void changeStatusBarColor(){

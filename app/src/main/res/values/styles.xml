@@ -72,4 +72,8 @@
     <item name="android:drawablePadding">20dp</item>
     </style>
 
+    <style name="viewParent.headerText.settingsTextIcon" parent="settingsText">
+        <item name="android:drawableRight">@drawable/ic_more</item>
+    </style>
+
 </resources>

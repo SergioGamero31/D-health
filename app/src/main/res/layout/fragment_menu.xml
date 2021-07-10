@@ -24,7 +24,8 @@
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Configuración" />
+                    android:text="Configuración"
+                    android:textSize="20sp"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -43,9 +44,9 @@
                     </de.hdodenhof.circleimageview.CircleImageView>
 
                     <TextView
-                        android:id="@+id/usernameTextView"
+                        android:id="@+id/txtviewUname"
                         style="@style/viewParent.headerText"
-                        android:text="Sergio Gamero"
+                        android:text="Nombre usuario"
                         android:textSize="18sp"
                         android:layout_toRightOf="@id/profileImage"
                         android:layout_marginTop="20dp"/>
@@ -55,7 +56,7 @@
                         android:text="Editar datos personales"
                         android:textSize="16sp"
                         android:textColor="#5D5C5C"
-                        android:layout_below="@id/usernameTextView"
+                        android:layout_below="@id/txtviewUname"
                         android:layout_toRightOf="@id/profileImage"/>
 
                     <ImageView
@@ -69,8 +70,36 @@
                 <Switch
                     android:id="@+id/darkModeSwitch"
                     style="@style/settingsText"
-                    android:drawableLeft="@drawable/ic__home"
+                    android:drawableLeft="@drawable/ic_dark_mode"
                     android:text="Modo Oscuro" />
+
+                <TextView
+                    style="@style/viewParent.headerText.settingsMiniTitle"
+                    android:text="Notificaciones"/>
+
+                <Switch
+                    android:id="@+id/notiSwitch"
+                    style="@style/settingsText"
+                    android:drawableLeft="@drawable/ic_notifications"
+                    android:text="Notificaciones" />
+
+                <TextView
+                    style="@style/viewParent.headerText.settingsMiniTitle"
+                    android:text="Otros"/>
+                <TextView
+                    android:id="@+id/mbtnLogOut"
+                    style="@style/viewParent.headerText.settingsTextIcon"
+                    android:drawableLeft="@drawable/ic_logout"
+                    android:text="Cerrar Sesión" />
+
+                <TextView
+                    style="@style/viewParent.headerText.settingsTextIcon"
+                    android:drawableLeft="@drawable/ic_edit_profile"
+                    android:text="Política de privacidad" />
+                <TextView
+                    style="@style/viewParent.headerText.settingsTextIcon"
+                    android:drawableLeft="@drawable/ic_edit_password"
+                    android:text="Contacto" />
 
             </LinearLayout>
 

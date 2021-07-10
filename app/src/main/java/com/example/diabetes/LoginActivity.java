@@ -110,7 +110,16 @@ import java.util.Arrays;
         });
     }
 
-    public void goMainScreen(){
+     @Override
+     protected void onStart() {
+         super.onStart();
+         if (mAuth.getCurrentUser() !=null){
+             startActivity(new Intent(LoginActivity.this, MainActivity.class));
+             finish();
+         }
+     }
+
+     public void goMainScreen(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
