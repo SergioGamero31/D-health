@@ -12,10 +12,10 @@ import com.example.diabetes.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link nutrition#newInstance} factory method to
+ * Use the {@link NutritionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class nutrition extends Fragment {
+public class NutritionFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class nutrition extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public nutrition() {
+    public NutritionFragment() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class nutrition extends Fragment {
      * @return A new instance of fragment nutrition.
      */
     // TODO: Rename and change types and number of parameters
-    public static nutrition newInstance(String param1, String param2) {
-        nutrition fragment = new nutrition();
+    public static NutritionFragment newInstance(String param1, String param2) {
+        NutritionFragment fragment = new NutritionFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
