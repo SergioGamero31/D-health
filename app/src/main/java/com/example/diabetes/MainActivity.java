@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import Fragments.NutritionFragment;
 import Fragments.PedometerFragment;
 import Interfaces.IComDashboard;
 
@@ -124,7 +125,11 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
 
     @Override
     public void regFood() {
-        Toast.makeText(getApplicationContext(),"Registrar Comida", Toast.LENGTH_SHORT).show();
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_container, new NutritionFragment());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     @Override
