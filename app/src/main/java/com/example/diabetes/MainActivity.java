@@ -3,19 +3,26 @@ package com.example.diabetes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import Fragments.PedometerFragment;
+import Interfaces.IComDashboard;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements IComDashboard {
+
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
 
     MainFragment mainFragment = new MainFragment();
     ForumFragment forumFragment = new ForumFragment();
@@ -90,5 +97,38 @@ public class MainActivity extends AppCompatActivity {
             Window window = getWindow();
             window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
+    }
+
+    @Override
+    public void regSugar() {
+        Toast.makeText(getApplicationContext(),"Registrar Azucar", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void doExcercise() {
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_container, new PedometerFragment());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
+        //Toast.makeText(getApplicationContext(),"Hacer ejercicio", Toast.LENGTH_SHORT).show();
+        //Intent intent = new Intent(this, ExcerciseActivity.class);
+        //startActivity(intent);
+    }
+
+    @Override
+    public void regMedicine() {
+        Toast.makeText(getApplicationContext(),"Registrar medicina", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void regFood() {
+        Toast.makeText(getApplicationContext(),"Registrar Comida", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void seeProgress() {
+        Toast.makeText(getApplicationContext(),"Ver Progreso", Toast.LENGTH_SHORT).show();
     }
 }

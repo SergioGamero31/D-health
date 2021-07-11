@@ -15,5 +15,7 @@
     <color name ="colorAccentLight">#75F8F1</color>
     <color name ="colorAccentDark">#00ADC1</color>
 
+    <color name ="colorAccentLight2">#AAE7E4</color>
+
     <color name="miniTitle">#2A2E43</color>
 </resources>
