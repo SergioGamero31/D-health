@@ -7,7 +7,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/podo_background">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,14 +21,14 @@
 
                 <com.mikhaellopez.circularprogressbar.CircularProgressBar
                     android:id="@+id/cProgressBar"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
                     android:layout_marginTop="50dp"
                     android:layout_centerInParent="true"
                     app:cpb_background_progressbar_color="@color/colorAccentLight2"
                     app:cpb_background_progressbar_width="15dp"
                     app:cpb_progress_direction="to_right"
-                    app:cpb_progressbar_color="@color/colorAccent"
+                    app:cpb_progressbar_color="@color/login_bk_color"
                     app:cpb_progressbar_width="15dp"
                     app:cpb_round_border="false" />
 
@@ -37,6 +38,7 @@
                     android:layout_below="@+id/cProgressBar"
                     android:text="0"
                     android:textSize="35sp"
+                    android:textColor="@color/login_bk_color"
                     android:layout_centerInParent="true"/>
 
             </RelativeLayout>
@@ -45,7 +47,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -63,6 +66,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Calorías"
+                        android:textSize="17sp"
+                        android:layout_marginBottom="3dp"
+                        android:textColor="@color/login_bk_color"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="17sp"
+                        android:textColor="@color/login_bk_color"
                         android:layout_gravity="center"/>
 
                 </LinearLayout>
@@ -83,6 +96,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Tiempo"
+                        android:textSize="17sp"
+                        android:layout_marginBottom="3dp"
+                        android:textColor="@color/login_bk_color"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="17sp"
+                        android:textColor="@color/login_bk_color"
                         android:layout_gravity="center"/>
 
                 </LinearLayout>
@@ -103,6 +126,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Km"
+                        android:textSize="17sp"
+                        android:layout_marginBottom="3dp"
+                        android:textColor="@color/login_bk_color"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="17sp"
+                        android:textColor="@color/login_bk_color"
                         android:layout_gravity="center"/>
 
                 </LinearLayout>
@@ -112,12 +145,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="100dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btnFacebook"
+                    android:id="@+id/btnReset"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:background="@drawable/ic_reset" />
