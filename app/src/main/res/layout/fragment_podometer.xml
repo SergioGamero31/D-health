@@ -33,7 +33,7 @@
                     app:cpb_round_border="false" />
 
                 <TextView
-                    android:id="@+id/stepsTaken"
+                    android:id="@+id/txstepCounter"
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_below="@+id/cProgressBar"
                     android:text="0"
