@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
     @Override
     public void regFood() {
         Toast.makeText(getApplicationContext(),"Registrar Comida", Toast.LENGTH_SHORT).show();
+
     }
 
     @Override

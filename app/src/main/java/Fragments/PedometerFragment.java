@@ -27,6 +27,10 @@ import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 public class PedometerFragment extends Fragment implements SensorEventListener {
 
     private TextView txstepCounter;
+    private TextView txtCal;
+    private TextView txtTime;
+    private TextView txtDist;
+
     private CircularProgressBar cProgressBar;
     private Button btnReset;
 
@@ -84,7 +88,7 @@ public class PedometerFragment extends Fragment implements SensorEventListener {
     public void onResume() {
         super.onResume();
         if(sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)!=null)
-            sensorManager.registerListener(this, mstepCounter, SensorManager.SENSOR_DELAY_FASTEST);
+            sensorManager.registerListener(this, mstepCounter, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
