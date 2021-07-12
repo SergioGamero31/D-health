@@ -27,6 +27,7 @@ import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 public class PedometerFragment extends Fragment implements SensorEventListener {
 
     private TextView txstepCounter;
+    private TextView txtmaxStep;
     private TextView txtCal;
     private TextView txtTime;
     private TextView txtDist;
@@ -39,6 +40,7 @@ public class PedometerFragment extends Fragment implements SensorEventListener {
 
     private boolean sensorPresent;
     int stepCount = 0;
+    int stepMax = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -51,10 +53,16 @@ public class PedometerFragment extends Fragment implements SensorEventListener {
         View view = inflater.inflate(R.layout.fragment_podometer, container, false);
 
         txstepCounter = view.findViewById(R.id.txstepCounter);
+        txtmaxStep = view.findViewById(R.id.txstepCounter);
         cProgressBar = view.findViewById(R.id.cProgressBar);
         btnReset = view.findViewById(R.id.btnReset);
 
+        txtCal = view.findViewById(R.id.txCal);
+        txtTime = view.findViewById(R.id.txTime);
+        txtDist = view.findViewById(R.id.txDist);
+
         sensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
+
 
         if(sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)!=null){
             mstepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
@@ -75,8 +83,9 @@ public class PedometerFragment extends Fragment implements SensorEventListener {
             stepCount = (int) event.values[0];
             txstepCounter.setText(String.valueOf(stepCount));
             cProgressBar.setProgressWithAnimation((float) stepCount);
-
         }
+        txtCal.setText(String.valueOf(stepCount/20));
+        getDistance();
     }
 
     @Override
@@ -107,4 +116,9 @@ public class PedometerFragment extends Fragment implements SensorEventListener {
             }
         });
     }
+    public void getDistance(){
+        float distance = (float)(stepCount*71) / (float)100000;
+        txtDist.setText(String.format("%.2f", distance));
+    }
+
 }

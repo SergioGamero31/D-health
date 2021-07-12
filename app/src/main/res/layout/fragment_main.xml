@@ -43,7 +43,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
-                        android:text="Anashe"
+                        android:text="Bienvenido"
                         android:textSize="17sp"
                         android:textColor="#BDF8FF"/>
 

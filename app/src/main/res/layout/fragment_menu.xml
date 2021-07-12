@@ -96,9 +96,15 @@
                     style="@style/viewParent.headerText.settingsTextIcon"
                     android:drawableLeft="@drawable/ic_edit_profile"
                     android:text="Política de privacidad" />
+
                 <TextView
                     style="@style/viewParent.headerText.settingsTextIcon"
-                    android:drawableLeft="@drawable/ic_edit_password"
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:text="Términos y condiciones" />
+
+                <TextView
+                    style="@style/viewParent.headerText.settingsTextIcon"
+                    android:drawableLeft="@drawable/ic_message"
                     android:text="Contacto" />
 
             </LinearLayout>

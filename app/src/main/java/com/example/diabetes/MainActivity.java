@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 transaction.setCustomAnimations(R.anim.enter_right_left,R.anim.exit_left_right);
                 transaction.replace(R.id.frame_container, fragment);
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         }

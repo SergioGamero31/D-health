@@ -35,7 +35,6 @@
             style="@style/viewParent.headerText.NoMode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_centerHorizontal="true"
             android:layout_marginTop="145dp"
             android:text="kcal"
@@ -219,13 +218,12 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:src="@drawable/ic_beer"
-                    app:srcCompat="@android:drawable/ic_input_add" />
+                    android:src="@drawable/ic_plus" />
 
                 <TextView
                     android:layout_width="wrap_content"
