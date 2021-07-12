@@ -26,10 +26,10 @@
                     android:layout_marginTop="70dp"
                     android:layout_centerInParent="true"
                     app:cpb_background_progressbar_color="@color/colorAccentLight2"
-                    app:cpb_background_progressbar_width="15dp"
+                    app:cpb_background_progressbar_width="17dp"
                     app:cpb_progress_direction="to_right"
                     app:cpb_progressbar_color="@color/login_bk_color"
-                    app:cpb_progressbar_width="15dp"
+                    app:cpb_progressbar_width="17dp"
                     app:cpb_round_border="false" />
 
                 <TextView

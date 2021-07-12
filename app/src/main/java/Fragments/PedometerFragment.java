@@ -113,9 +113,15 @@ public class PedometerFragment extends Fragment implements SensorEventListener {
             public void onClick(View v) {
                 stepCount = 0;
                 txstepCounter.setText(String.valueOf(stepCount));
+                saveData();
             }
         });
     }
+
+    public void saveData(){
+
+    }
+
     public void getDistance(){
         float distance = (float)(stepCount*71) / (float)100000;
         txtDist.setText(String.format("%.2f", distance));

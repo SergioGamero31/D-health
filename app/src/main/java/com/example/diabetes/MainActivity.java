@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import Fragments.GlucosaFragment;
 import Fragments.NutritionFragment;
 import Fragments.PedometerFragment;
 import Interfaces.IComDashboard;
@@ -103,7 +104,11 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
 
     @Override
     public void regSugar() {
-        Toast.makeText(getApplicationContext(),"Registrar Azucar", Toast.LENGTH_SHORT).show();
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_container, new GlucosaFragment());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     @Override
