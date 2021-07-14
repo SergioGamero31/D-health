@@ -97,20 +97,18 @@
                         android:layout_marginBottom="25dp">
 
                         <EditText
-                            android:id="@+id/editTextNumber"
+                            android:id="@+id/editTextGlucosa"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:ems="5"
                             android:inputType="number" />
 
-                        <TextView
-                            android:id="@+id/textView9"
+                        <Spinner
+                            android:id="@+id/spinner2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="MG/DL"
-                            android:textColor="#070707"
-                            android:textStyle="bold"
+                            android:entries="@array/glucosa"
                             android:paddingLeft="5dp"/>
 
                     </LinearLayout>

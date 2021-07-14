@@ -5,4 +5,10 @@
         <item>Tomar medicina</item>
         <item>Hacer ejercicio</item>
     </array>
+
+    <array name="glucosa">
+        <item>mg/dL</item>
+        <item>mmol/L</item>
+    </array>
+
 </resources>

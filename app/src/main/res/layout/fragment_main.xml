@@ -83,7 +83,7 @@
                                 android:layout_marginTop="12dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Azúcar"
+                                android:text="Glucosa"
                                 android:textColor="#000"
                                 android:textSize="16sp"/>
 
@@ -209,12 +209,12 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/ic_blood"/>
+                                android:src="@drawable/ic_stetho"/>
                             <TextView
                                 android:layout_marginTop="12dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Azúcar"
+                                android:text="Consulta"
                                 android:textColor="#000"
                                 android:textSize="16sp"/>
 
