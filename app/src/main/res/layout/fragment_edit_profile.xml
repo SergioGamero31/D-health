@@ -23,8 +23,8 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="40dp"
+                    android:layout_height="26dp"
                     android:layout_alignParentLeft="true"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="30dp"
@@ -37,7 +37,7 @@
                     android:layout_marginTop="30dp"
                     android:text="Perfil"
                     android:textColor="@color/whiteTextColor"
-                    android:textSize="25sp"
+                    android:textSize="22sp"
                     android:textStyle="bold"
                     android:layout_centerHorizontal="true"/>
 
@@ -48,7 +48,7 @@
                     android:layout_marginTop="35dp"
                     android:text="Guardar"
                     android:textColor="@color/whiteTextColor"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
                     android:layout_alignParentRight="true"/>
 
             </RelativeLayout>
@@ -86,27 +86,28 @@
             android:elevation="10dp"
             android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp">
 
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/ptextInputName"
                     style="@style/parent"
-                    android:layout_marginTop="@dimen/loginViewsMargin">
+                    android:layout_marginTop="20dp">
 
                     <EditText
                         android:id="@+id/peditTextName"
                         style="@style/modifiedEditText"
-                        android:hint="Nombre Completo"
                         android:inputType="textEmailAddress"
-                        android:maxLines="1" />
+                        android:maxLines="1"
+                        android:hint="Nombre Completo" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-            </LinearLayout>
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

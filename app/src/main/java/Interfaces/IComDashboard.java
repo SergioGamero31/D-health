@@ -6,5 +6,6 @@ public interface IComDashboard {
     public void doExcercise();
     public void regMedicine();
     public void regFood();
+    public void doConsult();
     public void seeProgress();
 }

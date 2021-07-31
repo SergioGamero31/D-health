@@ -76,4 +76,9 @@
         <item name="android:drawableRight">@drawable/ic_more</item>
     </style>
 
+    <style name="profileEditText">
+        <item name="android:textColor">#B1B1B1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">18dp</item>
+    </style>
 </resources>

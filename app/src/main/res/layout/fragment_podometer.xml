@@ -30,7 +30,8 @@
                     app:cpb_progress_direction="to_right"
                     app:cpb_progressbar_color="@color/login_bk_color"
                     app:cpb_progressbar_width="17dp"
-                    app:cpb_round_border="false" />
+                    app:cpb_round_border="false"
+                    app:cpb_progress_max="2500"/>
 
                 <TextView
                     android:id="@+id/txstepCounter"
@@ -67,8 +68,8 @@
                     android:paddingHorizontal="20dp">
 
                     <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:src="@drawable/ico_fuego"
                         android:layout_gravity="center"/>
 
@@ -98,8 +99,8 @@
                     android:paddingHorizontal="20dp">
 
                     <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:src="@drawable/ic_cron"
                         android:layout_gravity="center"/>
 
@@ -129,8 +130,8 @@
                     android:paddingHorizontal="20dp">
 
                     <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
                         android:src="@drawable/ic_dist"
                         android:layout_gravity="center"/>
 

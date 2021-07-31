@@ -141,6 +141,11 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
     }
 
     @Override
+    public void doConsult() {
+        Toast.makeText(getApplicationContext(),"Realizar Consulta", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
     public void seeProgress() {
         Toast.makeText(getApplicationContext(),"Ver Progreso", Toast.LENGTH_SHORT).show();
     }

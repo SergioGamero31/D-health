@@ -18,7 +18,7 @@ public class MainFragment extends Fragment {
 
     View view;
     Activity main;
-    CardView cardExcercise, cardSugar, cardMedicine, cardFood, cardStatistics;
+    CardView cardExcercise, cardSugar, cardMedicine, cardFood, cardStatistics, cardConsult;
     IComDashboard iComDashboard;
 
     public MainFragment() {
@@ -34,6 +34,7 @@ public class MainFragment extends Fragment {
         cardExcercise = view.findViewById(R.id.cardExcercise);
         cardMedicine = view.findViewById(R.id.cardMedicine);
         cardFood = view.findViewById(R.id.cardFood);
+        cardConsult = view.findViewById(R.id.cardConsult);
 
         cardStatistics = view.findViewById(R.id.cardStatistics);
 
@@ -77,6 +78,11 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 iComDashboard.seeProgress();
             }
+        });
+
+        cardConsult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { iComDashboard.doConsult(); }
         });
     }
 
