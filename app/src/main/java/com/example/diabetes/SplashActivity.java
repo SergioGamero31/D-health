@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.facebook.AccessToken;
+
 public class SplashActivity extends AppCompatActivity{
 
     private final int DURACION_SPLASH = 1500;
@@ -44,5 +46,4 @@ public class SplashActivity extends AppCompatActivity{
             window.setStatusBarColor(Color.TRANSPARENT);
         }
     }
-
 }

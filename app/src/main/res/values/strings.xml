@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">D-Health</string>
-    <string name="login_email_hint">Email</string>
-    <string name="login_password_hint">Password</string>
+
     <string name="facebook_app_id">745265419504688</string>
     <string name="fb_login_protocol_scheme">fb745265419504688</string>
+
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+
     <string name="error_login"> Error al iniciar sesión</string>
+    <string name="firebase_error">No se pudo iniciar sesión</string>
+    <string name="incorrect_login">No se pudo iniciar sesión, compruebe los datos</string>
+    <string name="fields_login">Debe completar los campos</string>
 </resources>
