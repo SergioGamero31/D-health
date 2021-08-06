@@ -26,6 +26,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.load.model.LazyHeaders;
 import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 import com.facebook.login.LoginManager;
@@ -95,28 +97,23 @@ public class MenuFragment extends Fragment {
 
         getUserInfo();
 
-        if (AccessToken.getCurrentAccessToken() == null){
-            goLoginScreen();
-        }else {
-            Profile profile = Profile.getCurrentProfile();
-            if (profile != null){
-                displayProfileInfo(profile);
-            }else{
-                Profile.fetchProfileForCurrentAccessToken();
+        Profile profile = Profile.getCurrentProfile();
+        if (profile != null){
+            displayProfileInfo(profile);
+        }else{
+            Profile.fetchProfileForCurrentAccessToken();
             }
-        }
 
         return view;
-
     }
 
     private void displayProfileInfo(Profile profile){
+        String id = profile.getId();
         String name = profile.getName();
         String photoUrl = profile.getProfilePictureUri(100,100).toString();
 
         txtviewUname.setText(name);
         Glide.with(getContext()).load(photoUrl).into(profileImage);
-
     }
 
     private  void getUserInfo(){

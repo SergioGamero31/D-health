@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.telecom.Call;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -89,7 +90,8 @@ import java.util.Arrays;
 
         btnFacebook = (Button) findViewById(R.id.btnFacebook);
         loginButton = (LoginButton) findViewById(R.id.loginFacebook);
-        loginButton.setReadPermissions(Arrays.asList("email"));
+
+        loginButton.setPermissions(Arrays.asList("email"));
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
