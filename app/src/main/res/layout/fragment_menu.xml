@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MenuFragment">
+    tools:context="Fragments.MenuFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,14 +18,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="20dp"
+                android:layout_marginTop="10dp">
 
                 <TextView
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Configuración"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp"
+                    android:textColor="?android:textColorPrimary"/>
 
                 <RelativeLayout
                     android:id="@+id/editData"
@@ -51,7 +53,8 @@
                         android:text="Nombre usuario"
                         android:textSize="18sp"
                         android:layout_toRightOf="@id/profileImage"
-                        android:layout_marginTop="20dp"/>
+                        android:layout_marginTop="20dp"
+                        android:textColor="?android:textColorPrimary"/>
 
                     <TextView
                         style="@style/viewParent.headerText"
@@ -73,7 +76,8 @@
                     android:id="@+id/darkModeSwitch"
                     style="@style/settingsText"
                     android:drawableLeft="@drawable/ic_dark_mode"
-                    android:text="Modo Oscuro" />
+                    android:text="Modo Oscuro"
+                    android:textColor="?android:textColorPrimary"/>
 
                 <TextView
                     style="@style/viewParent.headerText.settingsMiniTitle"
@@ -83,7 +87,8 @@
                     android:id="@+id/notiSwitch"
                     style="@style/settingsText"
                     android:drawableLeft="@drawable/ic_notifications"
-                    android:text="Notificaciones" />
+                    android:text="Notificaciones"
+                    android:textColor="?android:textColorPrimary"/>
 
                 <TextView
                     style="@style/viewParent.headerText.settingsMiniTitle"
@@ -92,22 +97,26 @@
                     android:id="@+id/mbtnLogOut"
                     style="@style/viewParent.headerText.settingsTextIcon"
                     android:drawableLeft="@drawable/ic_logout"
-                    android:text="Cerrar Sesión" />
+                    android:text="Cerrar Sesión"
+                    android:textColor="?android:textColorPrimary"/>
 
                 <TextView
                     style="@style/viewParent.headerText.settingsTextIcon"
                     android:drawableLeft="@drawable/ic_edit_profile"
-                    android:text="Política de privacidad" />
+                    android:text="Política de privacidad"
+                    android:textColor="?android:textColorPrimary"/>
 
                 <TextView
                     style="@style/viewParent.headerText.settingsTextIcon"
                     android:drawableLeft="@drawable/ic_lock"
-                    android:text="Términos y condiciones" />
+                    android:text="Términos y condiciones"
+                    android:textColor="?android:textColorPrimary"/>
 
                 <TextView
                     style="@style/viewParent.headerText.settingsTextIcon"
                     android:drawableLeft="@drawable/ic_message"
-                    android:text="Contacto" />
+                    android:text="Contacto"
+                    android:textColor="?android:textColorPrimary"/>
 
             </LinearLayout>
 

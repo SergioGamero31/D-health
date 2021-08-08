@@ -1,13 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
         <item name="android:windowEnableSplitTouch">false</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -27,7 +29,7 @@
     </style>
 
     <style name="viewParent.headerText.NoMode">
-        <item name="android:textColor">@color/darkTextColor</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
 
     <style name="parent">
@@ -81,4 +83,11 @@
         <item name="android:textSize">12sp</item>
         <item name="android:layout_marginTop">18dp</item>
     </style>
+
+    <style name="splashText" parent="viewParent">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

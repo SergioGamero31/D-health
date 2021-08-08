@@ -14,15 +14,19 @@ import android.view.WindowManager;
 
 import com.example.diabetes.R;
 
+public class ForumFragment extends Fragment {
 
-public class NutritionFragment extends Fragment {
+       public ForumFragment() {
+        // Required empty public constructor
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_nutrition, container, false);
+        View view = inflater.inflate(R.layout.fragment_forum, container, false);
 
         changeStatusBarColor();
+
         return view;
     }
 

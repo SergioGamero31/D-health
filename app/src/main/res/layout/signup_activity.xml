@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SignupActivity"
     android:layout_gravity="center"
-    android:background="@color/register_bk_color"
+    android:background="@drawable/sign_background"
     android:focusableInTouchMode="true"
     android:gravity="center"
     android:fitsSystemWindows="true">
@@ -31,29 +31,31 @@
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:text="Este es tu \nprimer paso \ncon nosotros"
-                    android:textColor="@color/whiteTextColor"/>
+                    android:text="@string/signup_message"
+                    android:textColor="@color/whiteTextColor" />
+
                 <ImageView
                     android:layout_width="144dp"
                     android:layout_height="144dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_logo_white"/>
+                    android:src="@drawable/ic_logo2"/>
 
             </RelativeLayout>
 
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/whiteTextColor"
-                app:cardCornerRadius="10dp">
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:background="@drawable/dep_background">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:orientation="vertical">
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputName"
@@ -63,11 +65,19 @@
                         <EditText
                             android:id="@+id/reditTextName"
                             style="@style/modifiedEditText"
-                            android:hint="Nombre Completo"
+                            android:hint="@string/signup_name_hint"
                             android:inputType="textPersonName"
                             android:maxLines="1"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputEmail"
@@ -83,6 +93,14 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputPassword"
                         style="@style/parent"
@@ -91,11 +109,19 @@
                         <EditText
                             android:id="@+id/reditTextPassword"
                             style="@style/modifiedEditText"
-                            android:hint="Constraseña"
+                            android:hint="@string/login_password_hint"
                             android:inputType="textPassword"
                             android:maxLines="1"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputRPassword"
@@ -105,36 +131,38 @@
                         <EditText
                             android:id="@+id/reditTextRpassword"
                             style="@style/modifiedEditText"
-                            android:hint="Repetir constraseña"
+                            android:hint="@string/signup_rpassword_hint"
                             android:inputType="textPassword"
                             android:maxLines="1"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
-                        android:id="@+id/cirRegisterButton"
-                        style="@style/loginButton"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="@dimen/loginViewsMargin"
-                        android:text="Registrarse"
-                        app:initialCornerAngle="27dp"
-                        app:spinning_bar_color="#FFF"
-                        app:spinning_bar_padding="6dp"
-                        app:spinning_bar_width="4dp"/>
+                </RelativeLayout>
 
-                    <TextView
-                        style="@style/parent"
-                        android:layout_marginTop="@dimen/loginViewsMargin"
-                        android:onClick="onLoginClick"
-                        android:text="¿Ya tienes una cuenta?"
-                        android:textAlignment="center"
-                        android:textColor="@color/themeColor"
-                        android:textSize="17sp"
-                        android:textStyle="bold"/>
+                <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                    android:id="@+id/cirRegisterButton"
+                    style="@style/loginButton"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:text="@string/signup_button"
+                    app:initialCornerAngle="27dp"
+                    app:spinning_bar_color="#FFF"
+                    app:spinning_bar_padding="6dp"
+                    app:spinning_bar_width="4dp"/>
 
-                </LinearLayout>
+                <TextView
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="onLoginClick"
+                    android:text="@string/signup_button_log"
+                    android:textAlignment="center"
+                    android:textColor="@color/themeColor"
+                    android:textSize="17sp"
+                    android:textStyle="bold"/>
 
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -154,7 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="6"
-                    android:text="Usa Otros Métodos"
+                    android:text="@string/login_methods"
                     android:textAlignment="center"
                     android:textColor="@color/whiteTextColor"
                     android:textSize="12sp"/>

@@ -4,11 +4,24 @@
     <string name="facebook_app_id">857957511817240</string>
     <string name="fb_login_protocol_scheme">fb857957511817240</string>
 
+    <string name="login_message">¿Ya tienes \nuna cuenta?</string>
+
     <string name="login_email_hint">Email</string>
-    <string name="login_password_hint">Password</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="login_button">Ingresar</string>
+    <string name="login_methods">Usa Otros Métodos</string>
+    <string name="login_password_res">¿Olvidaste tu contraseña?</string>
+    <string name="login_button_sign">¿Eres nuevo? Registrate Ahora</string>
+
+    <string name="signup_message">Este es tu \nprimer paso \ncon nosotros</string>
+    <string name="signup_name_hint">Nombre Completo</string>
+    <string name="signup_rpassword_hint">Repetir Contraseña</string>
+    <string name="signup_button">Registrarse</string>
+    <string name="signup_button_log">¿Ya tienes una cuenta?</string>
 
     <string name="error_login"> Error al iniciar sesión</string>
     <string name="firebase_error">No se pudo iniciar sesión</string>
     <string name="incorrect_login">No se pudo iniciar sesión, compruebe los datos</string>
     <string name="fields_login">Debe completar los campos</string>
+
 </resources>

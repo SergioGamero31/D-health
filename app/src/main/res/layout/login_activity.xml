@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:layout_gravity="center"
-    android:background="@color/login_bk_color"
     android:focusableInTouchMode="true"
     android:fitsSystemWindows="true">
 
@@ -31,7 +30,7 @@
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:text="¿Ya tienes \nuna cuenta?" />
+                    android:text="@string/login_message"/>
 
                 <ImageView
                     android:layout_width="144dp"
@@ -64,7 +63,7 @@
                 <EditText
                     android:id="@+id/editTextPassword"
                     style="@style/modifiedEditText"
-                    android:hint="Contraseña"
+                    android:hint="@string/login_password_hint"
                     android:inputType="textPassword"
                     android:maxLines="1"/>
 
@@ -74,7 +73,7 @@
                 style="@style/viewParent"
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
-                android:text="¿Olvidaste tu contraseña?"
+                android:text="@string/login_password_res"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="@dimen/newsMoreTextSize"/>
 
@@ -83,7 +82,7 @@
                 style="@style/loginButton"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/loginViewsMargin"
-                android:text="Ingresar"
+                android:text="@string/login_button"
                 app:initialCornerAngle="27dp"
                 app:spinning_bar_color="#FFF"
                 app:spinning_bar_padding="6dp"
@@ -93,7 +92,7 @@
                 style="@style/parent"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 android:onClick="onLoginClick"
-                android:text="¿Eres nuevo? Registrate Ahora"
+                android:text="@string/login_button_sign"
                 android:textAlignment="center"
                 android:gravity="center"
                 android:textColor="@color/themeColor"
@@ -111,14 +110,15 @@
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_weight="3"
-                    android:background="@color/colorPrimaryDark"/>
+                    android:background="@color/colorPrimaryDark"
+                    android:backgroundTint="?android:textColorPrimary"/>
 
                 <TextView
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="6"
-                    android:text="Usa Otros Métodos"
+                    android:text="@string/login_methods"
                     android:textAlignment="center"
                     android:gravity="center"
                     android:textSize="12sp" />
@@ -127,7 +127,8 @@
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_weight="3"
-                    android:background="@color/colorPrimaryDark"/>
+                    android:background="@color/colorPrimaryDark"
+                    android:backgroundTint="?android:textColorPrimary"/>
 
             </LinearLayout>
 

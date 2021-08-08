@@ -1,7 +1,9 @@
-package com.example.diabetes;
+package Fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+
+import com.example.diabetes.R;
 
 import Interfaces.IComDashboard;
 
@@ -39,6 +45,8 @@ public class MainFragment extends Fragment {
         cardStatistics = view.findViewById(R.id.cardStatistics);
 
         dashboardEvents();
+
+        changeStatusBarColor();
 
         return view;
 
@@ -92,6 +100,16 @@ public class MainFragment extends Fragment {
         if(context instanceof Activity){
             main = (Activity) context;
             iComDashboard = (IComDashboard) main;
+        }
+    }
+
+    public void changeStatusBarColor(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+            Window window = getActivity().getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(getResources().getColor(R.color.themeColor));
         }
     }
 }

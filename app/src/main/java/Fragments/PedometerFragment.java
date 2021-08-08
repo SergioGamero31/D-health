@@ -15,7 +15,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,7 +49,7 @@ public class PedometerFragment extends Fragment implements SensorEventListener {
             requestPermissions(new String[]{Manifest.permission.ACTIVITY_RECOGNITION}, 0);
         }
 
-        View view = inflater.inflate(R.layout.fragment_podometer, container, false);
+        View view = inflater.inflate(R.layout.fragment_pedometer, container, false);
 
         txstepCounter = view.findViewById(R.id.txstepCounter);
         txtmaxStep = view.findViewById(R.id.txstepCounter);

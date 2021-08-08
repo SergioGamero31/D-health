@@ -5,16 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment"
+    tools:context="Fragments.MainFragment"
     android:fitsSystemWindows="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/dashboard_background">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -22,32 +22,40 @@
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp">
+                    android:layout_height="190dp"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/dash_background">
 
-                    <TextView
-                        android:id="@+id/textDashboard"
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Mi Dashboard"
-                        android:textStyle="bold"
-                        android:textSize="25sp"
-                        android:textColor="@color/whiteTextColor"/>
+                        android:layout_marginTop="32dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp">
 
-                    <TextView
-                        android:layout_below="@+id/textDashboard"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:text="Bienvenido"
-                        android:textSize="17sp"
-                        android:textColor="#BDF8FF"/>
+                        <TextView
+                            android:id="@+id/textDashboard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mi Dashboard"
+                            android:textStyle="bold"
+                            android:textSize="25sp"
+                            android:textColor="@color/whiteTextColor"/>
+
+                        <TextView
+                            android:layout_below="@+id/textDashboard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="Bienvenido"
+                            android:textSize="17sp"
+                            android:textColor="#BDF8FF"/>
+
+                    </RelativeLayout>
 
                 </RelativeLayout>
+
 
                 <GridLayout
                     android:layout_width="match_parent"
@@ -56,7 +64,8 @@
                     android:columnOrderPreserved="false"
                     android:rowCount="3"
                     android:columnCount="2"
-                    android:layout_marginTop="40dp">
+                    android:elevation="10dp"
+                    android:layout_marginTop="-60dp">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardSugar"
@@ -84,8 +93,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Glucosa"
-                                android:textColor="#000"
-                                android:textSize="16sp"/>
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
 
                         </LinearLayout>
 
@@ -117,8 +126,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Ejercicio"
-                                android:textColor="#000"
-                                android:textSize="16sp"/>
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
 
                         </LinearLayout>
 
@@ -150,8 +159,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Medicación"
-                                android:textColor="#000"
-                                android:textSize="16sp"/>
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
 
                         </LinearLayout>
 
@@ -183,8 +192,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Nutrición"
-                                android:textColor="#000"
-                                android:textSize="16sp"/>
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
 
                         </LinearLayout>
 
@@ -216,8 +225,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Consulta"
-                                android:textColor="#000"
-                                android:textSize="16sp"/>
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
 
                         </LinearLayout>
 
@@ -249,8 +258,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Mi progreso"
-                                android:textColor="#000"
-                                android:textSize="16sp"/>
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
 
                         </LinearLayout>
 

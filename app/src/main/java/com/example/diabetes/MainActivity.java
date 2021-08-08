@@ -15,10 +15,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.facebook.AccessToken;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import Fragments.ForumFragment;
 import Fragments.GlucosaFragment;
+import Fragments.MainFragment;
+import Fragments.MenuFragment;
 import Fragments.NutritionFragment;
 import Fragments.PedometerFragment;
 import Interfaces.IComDashboard;
@@ -39,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-        changeStatusBarColor();
 
         BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -91,21 +92,6 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
         }
     }
 
-    /*public void changeStatusBarColor(){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-
-            Window window = getWindow();
-            window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            window.setStatusBarColor(Color.TRANSPARENT);
-        }
-    }*/
-    public void changeStatusBarColor(){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Window window = getWindow();
-            window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
-    }
 
     @Override
     public void regSugar() {
@@ -124,7 +110,6 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
-        //Toast.makeText(getApplicationContext(),"Hacer ejercicio", Toast.LENGTH_SHORT).show();
         //Intent intent = new Intent(this, ExcerciseActivity.class);
         //startActivity(intent);
     }
