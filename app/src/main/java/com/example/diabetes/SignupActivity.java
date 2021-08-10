@@ -26,16 +26,10 @@ import java.util.Map;
 
 public class SignupActivity extends AppCompatActivity {
 
-    private EditText rTextName;
-    private EditText rTextEmail;
-    private EditText rTextPassword;
-    private EditText rTextRpassword;
+    private EditText rTextName, rTextEmail, rTextPassword, rTextRpassword;
     private Button  registerButton;
 
-    private String rname = "";
-    private String remail = "";
-    private String rpassword = "";
-    private String rrpassword = "";
+    private String rname, remail, rpassword, rrpassword;
 
     FirebaseAuth mAuth;
     DatabaseReference mDatabase;
@@ -68,13 +62,13 @@ public class SignupActivity extends AppCompatActivity {
                         if(rpassword.equals(rrpassword)){
                             registerUser();
                         }else{
-                            Toast.makeText(SignupActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SignupActivity.this, R.string.signup_m_pass , Toast.LENGTH_LONG).show();
                         }
                     }else{
-                        Toast.makeText(SignupActivity.this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_LONG).show();
+                        Toast.makeText(SignupActivity.this, R.string.signup_m_pass2, Toast.LENGTH_LONG).show();
                     }
                 } else{
-                    Toast.makeText(SignupActivity.this, "Debe completar los campos", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignupActivity.this, R.string.signup_m_fields, Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -98,12 +92,12 @@ public class SignupActivity extends AppCompatActivity {
                                 startActivity(new Intent(SignupActivity.this, LoginActivity.class));
                                 finish();
                             }else{
-                                Toast.makeText(SignupActivity.this, "No se pudieron crear los datos correctamente", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SignupActivity.this, R.string.signup_incorrect, Toast.LENGTH_LONG).show();
                             }
                         }
                     });
                 }else {
-                    Toast.makeText(SignupActivity.this, "Usuario no registrado", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupActivity.this, R.string.signup_error, Toast.LENGTH_SHORT).show();
                 }
             }
         });

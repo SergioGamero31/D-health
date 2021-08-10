@@ -17,7 +17,6 @@ import com.example.diabetes.R;
 public class ForumFragment extends Fragment {
 
        public ForumFragment() {
-        // Required empty public constructor
     }
 
     @Override

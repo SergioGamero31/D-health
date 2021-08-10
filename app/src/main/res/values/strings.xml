@@ -19,9 +19,25 @@
     <string name="signup_button">Registrarse</string>
     <string name="signup_button_log">¿Ya tienes una cuenta?</string>
 
+    <string name="signup_m_fields">Debe completar los campos</string>
+    <string name="signup_m_pass">Las contraseñas no coinciden</string>
+    <string name="signup_m_pass2">La contraseña debe tener al menos 6 caracteres</string>
+
     <string name="error_login"> Error al iniciar sesión</string>
     <string name="firebase_error">No se pudo iniciar sesión</string>
     <string name="incorrect_login">No se pudo iniciar sesión, compruebe los datos</string>
     <string name="fields_login">Debe completar los campos</string>
+
+    <string name="signup_incorrect">No se pudieron crear los datos correctamente</string>
+    <string name="signup_error">Usuario no registrado</string>
+
+    <string name="pedo_message">No se encontró el sensor" </string>
+
+    <string name="editp_profile">Perfil</string>
+    <string name="editp_save">Guardar</string>
+    <string name="editp_age_hint">Edad</string>
+    <string name="editp_sex_hint">Sexo</string>
+    <string name="editp_height_hint">Talla</string>
+    <string name="editp_weight_hint">Peso</string>
 
 </resources>

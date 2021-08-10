@@ -2,7 +2,6 @@ package Fragments;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -28,7 +27,6 @@ public class MainFragment extends Fragment {
     IComDashboard iComDashboard;
 
     public MainFragment() {
-        // Required empty public constructor
     }
 
     @Override

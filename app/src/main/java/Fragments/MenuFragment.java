@@ -1,20 +1,15 @@
  package Fragments;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,38 +19,25 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.model.GlideUrl;
-import com.bumptech.glide.load.model.LazyHeaders;
 import com.example.diabetes.LoginActivity;
 import com.example.diabetes.R;
-import com.facebook.AccessToken;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
+
 import com.facebook.Profile;
-import com.facebook.ProfileTracker;
+
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.io.IOError;
-import java.io.IOException;
-import java.net.URL;
-
-import Fragments.EditProfileFragment;
-import Fragments.GlucosaFragment;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MenuFragment extends Fragment {
 
-    private TextView mbtnLogOut;
-    private TextView txtviewUname;
+    private TextView mbtnLogOut, txtviewUname;
     private CircleImageView profileImage;
-
 
     private RelativeLayout btnEditData;
 

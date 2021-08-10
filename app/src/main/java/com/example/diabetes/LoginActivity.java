@@ -4,8 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.telecom.Call;
-import android.util.Log;
+
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -33,17 +32,14 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import java.sql.Array;
 import java.util.Arrays;
 
  public class LoginActivity extends AppCompatActivity {
 
-    private EditText TextEmail;
-    private EditText TextPassword;
+    private EditText TextEmail, TextPassword;
     private Button btnLogin;
 
-    private String email = "";
-    private String password = "";
+    private String email, password;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener lAuth;
 
@@ -53,8 +49,10 @@ import java.util.Arrays;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
+
         changeStatusBarColor();
 
         mAuth = FirebaseAuth.getInstance();

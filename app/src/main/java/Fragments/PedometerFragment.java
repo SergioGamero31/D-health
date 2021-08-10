@@ -22,14 +22,9 @@ import android.widget.Toast;
 import com.example.diabetes.R;
 import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
-
 public class PedometerFragment extends Fragment implements SensorEventListener {
 
-    private TextView txstepCounter;
-    private TextView txtmaxStep;
-    private TextView txtCal;
-    private TextView txtTime;
-    private TextView txtDist;
+    private TextView txstepCounter, txtmaxStep, txtCal, txtTime, txtDist;
 
     private CircularProgressBar cProgressBar;
     private Button btnReset;
@@ -67,7 +62,7 @@ public class PedometerFragment extends Fragment implements SensorEventListener {
             mstepCounter = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
             sensorPresent = true;
         }else {
-            Toast.makeText(getActivity(), "No se encontró el sensor", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), R.string.pedo_message, Toast.LENGTH_LONG).show();
             sensorPresent = false;
         }
 

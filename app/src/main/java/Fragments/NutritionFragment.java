@@ -14,7 +14,6 @@ import android.view.WindowManager;
 
 import com.example.diabetes.R;
 
-
 public class NutritionFragment extends Fragment {
 
     @Override
@@ -28,7 +27,6 @@ public class NutritionFragment extends Fragment {
 
     public void changeStatusBarColor(){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-
             Window window = getActivity().getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);

@@ -61,106 +61,114 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_marginTop="330dp"
-                android:layout_marginBottom="30dp">
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp">
 
                 <LinearLayout
+                    android:id="@+id/linearCal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/linearTime"
                     android:orientation="vertical"
-                    android:paddingHorizontal="20dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="50dp">
+                    android:paddingHorizontal="20dp">
 
                     <ImageView
                         android:layout_width="42dp"
                         android:layout_height="42dp"
-                        android:src="@drawable/ico_fuego"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:src="@drawable/ico_fuego" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Calorías"
-                        android:textSize="15sp"
+                        android:layout_gravity="center"
                         android:layout_marginBottom="3dp"
+                        android:text="Calorías"
                         android:textColor="@color/login_bk_color"
-                        android:textStyle="bold"
-                        android:layout_gravity="center"/>
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/txCal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="0"
-                        android:textSize="17sp"
                         android:textColor="@color/login_bk_color"
-                        android:layout_gravity="center"/>
+                        android:textSize="17sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/linearTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingHorizontal="20dp"
-                    android:layout_centerInParent="true">
+                    android:layout_centerInParent="true"
+                    android:paddingHorizontal="20dp">
 
                     <ImageView
                         android:layout_width="42dp"
                         android:layout_height="42dp"
-                        android:src="@drawable/ic_cron"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_cron" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tiempo"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
+                        android:layout_gravity="center"
                         android:layout_marginBottom="3dp"
+                        android:text="Tiempo"
                         android:textColor="@color/login_bk_color"
-                        android:layout_gravity="center"/>
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/txTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="0"
-                        android:textSize="17sp"
                         android:textColor="@color/login_bk_color"
-                        android:layout_gravity="center"/>
+                        android:textSize="17sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/linearDist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/linearTime"
                     android:orientation="vertical"
-                    android:paddingHorizontal="20dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="50dp">
+                    android:paddingHorizontal="20dp">
 
                     <ImageView
                         android:layout_width="42dp"
                         android:layout_height="42dp"
-                        android:src="@drawable/ic_dist"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_dist" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Km"
-                        android:textSize="17sp"
-                        android:textStyle="bold"
+                        android:layout_gravity="center"
                         android:layout_marginBottom="3dp"
+                        android:text="Km"
                         android:textColor="@color/login_bk_color"
-                        android:layout_gravity="center"/>
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/txDist"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="0"
-                        android:textSize="15sp"
                         android:textColor="@color/login_bk_color"
-                        android:layout_gravity="center"/>
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 

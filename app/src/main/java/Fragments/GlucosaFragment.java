@@ -10,17 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CalendarView;
-import android.widget.DatePicker;
+
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.diabetes.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.w3c.dom.Text;
-
-import java.util.Calendar;
 
 public class GlucosaFragment extends Fragment {
 
@@ -35,7 +31,6 @@ public class GlucosaFragment extends Fragment {
     private String gGlucosa;
 
     public GlucosaFragment() {
-        // Required empty public constructor
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

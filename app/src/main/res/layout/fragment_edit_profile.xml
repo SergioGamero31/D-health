@@ -16,6 +16,7 @@
             android:background="@drawable/ep_bakground">
 
             <RelativeLayout
+                android:id="@+id/profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -35,7 +36,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:text="Perfil"
+                    android:text="@string/editp_profile"
                     android:textColor="@color/whiteTextColor"
                     android:textSize="22sp"
                     android:textStyle="bold"
@@ -46,33 +47,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="35dp"
-                    android:text="Guardar"
+                    android:text="@string/editp_save"
                     android:textColor="@color/whiteTextColor"
                     android:textSize="17sp"
                     android:layout_alignParentRight="true"/>
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="95dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_run"
+                app:civ_border_color="#FFF"
+                app:civ_border_width="5dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/profileImage"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    app:civ_border_width="5dp"
-                    app:civ_border_color="#FFF"
-                    android:src="@drawable/ic_run"
-                    android:layout_marginRight="10dp"
-                    android:layout_centerHorizontal="true">
-
-                </de.hdodenhof.circleimageview.CircleImageView>
-
-            </RelativeLayout>
+            </de.hdodenhof.circleimageview.CircleImageView>
 
         </RelativeLayout>
 
@@ -103,7 +95,7 @@
                         style="@style/modifiedEditText"
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
-                        android:hint="Nombre Completo" />
+                        android:hint="@string/signup_name_hint" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,7 +137,7 @@
                     <EditText
                         android:id="@+id/peditTextPass"
                         style="@style/modifiedEditText"
-                        android:hint="Contraseña"
+                        android:hint="@string/login_password_hint"
                         android:inputType="textEmailAddress"
                         android:maxLines="1" />
 
@@ -160,14 +152,14 @@
                 android:layout_marginRight="30dp">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/ptextInputRpass"
+                    android:id="@+id/ptextInputNpass"
                     style="@style/parent"
                     android:layout_marginTop="@dimen/loginViewsMargin">
 
                     <EditText
-                        android:id="@+id/peditTextRpass"
+                        android:id="@+id/peditTextNpass"
                         style="@style/modifiedEditText"
-                        android:hint="Repetir Contraseña"
+                        android:hint="@string/signup_rpassword_hint"
                         android:inputType="textEmailAddress"
                         android:maxLines="1" />
 
@@ -195,7 +187,7 @@
                         <EditText
                             android:id="@+id/peditTextSex"
                             style="@style/modifiedEditText"
-                            android:hint="Edad"
+                            android:hint="@string/editp_age_hint"
                             android:inputType="textEmailAddress"
                             android:maxLines="1" />
 
@@ -216,7 +208,7 @@
                         <EditText
                             android:id="@+id/peditTextAge"
                             style="@style/modifiedEditText"
-                            android:hint="Sexo"
+                            android:hint="@string/editp_sex_hint"
                             android:inputType="textEmailAddress"
                             android:maxLines="1" />
 
@@ -245,7 +237,7 @@
                         <EditText
                             android:id="@+id/peditTextHeight"
                             style="@style/modifiedEditText"
-                            android:hint="Talla"
+                            android:hint="@string/editp_height_hint"
                             android:inputType="textEmailAddress"
                             android:maxLines="1"/>
 
@@ -266,7 +258,7 @@
                         <EditText
                             android:id="@+id/peditTextWeight"
                             style="@style/modifiedEditText"
-                            android:hint="Peso"
+                            android:hint="@string/editp_weight_hint"
                             android:inputType="textEmailAddress"
                             android:maxLines="1" />
 

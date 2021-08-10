@@ -7,15 +7,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import Fragments.ForumFragment;
 import Fragments.GlucosaFragment;
@@ -35,10 +33,13 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
     ForumFragment forumFragment = new ForumFragment();
     MenuFragment menuFragment = new MenuFragment();
 
+    private FirebaseAuth mAuth;
+
     int newPosition = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
@@ -46,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         loadFragment(mainFragment,0);
-
     }
 
     private final BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
