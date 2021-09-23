@@ -44,14 +44,14 @@
 
                 <TextView
                     android:id="@+id/txmaxStep"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/txstepCounter"
-                    android:text="2500"
                     android:layout_marginTop="150dp"
-                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="2500"
                     android:textColor="@color/login_bk_color"
-                    android:gravity="center"/>
+                    android:textSize="20sp" />
 
             </RelativeLayout>
 

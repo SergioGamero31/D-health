@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 import Fragments.ForumFragment;
 import Fragments.GlucosaFragment;
 import Fragments.MainFragment;
+import Fragments.MedicineFragment;
 import Fragments.MenuFragment;
 import Fragments.NutritionFragment;
 import Fragments.PedometerFragment;
@@ -116,7 +117,11 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
 
     @Override
     public void regMedicine() {
-        Toast.makeText(getApplicationContext(),"Registrar medicina", Toast.LENGTH_SHORT).show();
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_container, new MedicineFragment());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     @Override
