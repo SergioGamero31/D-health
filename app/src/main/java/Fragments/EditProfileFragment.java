@@ -33,6 +33,7 @@ public class EditProfileFragment extends Fragment {
     private EditText editName, editEmail, editPass, editNpass;
     private EditText editAge, editSex, editHeight, editWeight;
 
+
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
 
@@ -93,6 +94,9 @@ public class EditProfileFragment extends Fragment {
 
             }
         });
+    }
+    public void back(){
+
     }
 
     public void changeStatusBarColor(){

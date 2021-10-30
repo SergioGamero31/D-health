@@ -50,11 +50,11 @@
                     <TextView
                         android:id="@+id/txtviewUname"
                         style="@style/viewParent.headerText"
-                        android:text="Nombre usuario"
-                        android:textSize="18sp"
-                        android:layout_toRightOf="@id/profileImage"
                         android:layout_marginTop="20dp"
-                        android:textColor="?android:textColorPrimary"/>
+                        android:layout_toRightOf="@id/profileImage"
+                        android:text="Nombre usuario"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="18sp" />
 
                     <TextView
                         style="@style/viewParent.headerText"

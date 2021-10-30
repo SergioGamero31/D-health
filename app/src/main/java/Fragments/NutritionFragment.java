@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +25,6 @@ import com.example.diabetes.Tips;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.protobuf.StringValue;
 
 
 public class NutritionFragment extends Fragment {
@@ -42,7 +40,6 @@ public class NutritionFragment extends Fragment {
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Tips");
 
         recyclerTips = view.findViewById(R.id.reclyclerTips);
-        recyclerTips.setHasFixedSize(true);
         recyclerTips.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         mDatabase.keepSynced(true);
@@ -59,7 +56,7 @@ public class NutritionFragment extends Fragment {
             protected void populateViewHolder(TipViewHolder viewHolder, Tips model, int position) {
                 viewHolder.setTitle(model.getTitle());
                 viewHolder.setColor(model.getColor());
-                viewHolder.setImage(getActivity().getApplicationContext(), model.getImage());
+                viewHolder.setImage(getActivity(), model.getImage());
             }
         };
 
@@ -67,26 +64,24 @@ public class NutritionFragment extends Fragment {
     }
 
     public static class TipViewHolder extends RecyclerView.ViewHolder{
-        View mview;
+        View t_view;
         public TipViewHolder(View itemView){
             super(itemView);
-            mview = itemView;
+            t_view = itemView;
         }
         public void setTitle(String title){
-            TextView tipTitle = (TextView) mview.findViewById(R.id.tipText);
+            TextView tipTitle = (TextView) t_view.findViewById(R.id.tipText);
             tipTitle.setText(title);
         }
         public void setImage(Context ctx, String image){
-            ImageView tipImage = (ImageView)  mview.findViewById(R.id.tipImage);
+            ImageView tipImage = (ImageView)  t_view.findViewById(R.id.tipImage);
             Glide.with(ctx).load(image).into(tipImage);
         }
         public void setColor(String color){
-            LinearLayout tipColor = (LinearLayout) mview.findViewById(R.id.tipBackground);
+            LinearLayout tipColor = (LinearLayout) t_view.findViewById(R.id.tipBackground);
             String concat= "#" + color;
             int color2 = Color.parseColor(concat);
             tipColor.setBackgroundColor(color2);
-
-            Log.d("nashe",String.valueOf(color));
         }
     }
 
