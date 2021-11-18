@@ -33,10 +33,35 @@
         <entry key="..\:/Users/axexo/AndroidStudioProjects/D-health/app/src/main/res/layout/login_activity.xml" value="0.264" />
         <entry key="..\:/Users/axexo/AndroidStudioProjects/D-health/app/src/main/res/layout/main_activity.xml" value="0.25" />
         <entry key="..\:/Users/axexo/AndroidStudioProjects/D-health/app/src/main/res/layout/signup_activity.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable-hdpi/circle_button_right.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable-night/ic_more.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/circle_button.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_add_img.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_arrow.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_back_img.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_forum.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_medical_care.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_more.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_register_hero.xml" value="0.264" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_side_bg.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/splash_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/cardview_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/excercise_activity.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_edit_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_forum.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_glucosa.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_main.xml" value="0.264" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_medicine.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_nutrition.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_pedometer.xml" value="0.264" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/login_activity.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/on_boarding_activity.xml" value="0.264" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/signup_activity.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/slider_layout.xml" value="0.264" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

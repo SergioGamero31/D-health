@@ -22,4 +22,7 @@
     <color name ="colorAccentLight2">#AAE7E4</color>
 
     <color name="miniTitle">#2A2E43</color>
+
+    <color name="inactive">#B6B8BD</color>
+    <color name="active">#11CFC5</color>
 </resources>
