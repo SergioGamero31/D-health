@@ -14,16 +14,25 @@
         android:theme="@style/AppTheme.NoActionBar">
 
         <activity
-            android:name=".OnBoardingActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme">
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".OnBoardingActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.example.SplashActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".LoginActivity"
@@ -44,6 +53,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
