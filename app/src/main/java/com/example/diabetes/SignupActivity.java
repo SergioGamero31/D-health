@@ -83,6 +83,7 @@ public class SignupActivity extends AppCompatActivity {
         intent.putExtra("email", remail);
         intent.putExtra("password", rpassword);
         startActivity(intent);
+        finish();
     }
    public void changeStatusBarColor(){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

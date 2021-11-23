@@ -32,7 +32,7 @@ public class SignData extends AppCompatActivity {
     private Button continueButton;
 
     private String rname, remail, rpassword, rgender;
-    private Integer rage, rweight, rheight;
+    private String rage, rweight, rheight;
 
     FirebaseAuth mAuth;
     DatabaseReference mDatabase;
@@ -59,21 +59,21 @@ public class SignData extends AppCompatActivity {
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rage = Integer.parseInt(rTextAge.getText().toString().trim());
+                rage = rTextAge.getText().toString().trim();
                 rgender = spGender.getSelectedItem().toString().trim();
-                rweight = Integer.parseInt(rTextWeight.getText().toString().trim());
-                rheight = Integer.parseInt(rTextHeight.getText().toString().trim());
+                rweight = rTextWeight.getText().toString().trim();
+                rheight = rTextHeight.getText().toString().trim();
 
-                if(rage != null && !rgender.isEmpty() && rweight != null && rheight != null ){
-                    if(rage < 125){
-                        if(rweight < 200 ){
-                            if (rheight < 200){
+                if(!rage.isEmpty() && !rgender.isEmpty() && !rweight.isEmpty() && !rheight.isEmpty()){
+                    if(Integer.parseInt(rage) >= 5 && Integer.parseInt(rage) <= 125){
+                        if(Integer.parseInt(rheight) <= 200 ){
+                            if (Integer.parseInt(rweight) <= 200){
                                 registerData();
                             }else {
-                                Toast.makeText(SignData.this, R.string.error_height , Toast.LENGTH_LONG).show();
+                                Toast.makeText(SignData.this, R.string.error_weight , Toast.LENGTH_LONG).show();
                             }
                         }else{
-                            Toast.makeText(SignData.this, R.string.error_weight , Toast.LENGTH_LONG).show();
+                            Toast.makeText(SignData.this, R.string.error_height , Toast.LENGTH_LONG).show();
                         }
                     }else{
                         Toast.makeText(SignData.this, R.string.error_age, Toast.LENGTH_LONG).show();
@@ -124,5 +124,10 @@ public class SignData extends AppCompatActivity {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(Color.TRANSPARENT);
         }
+    }
+    public void onLoginClick(View view){
+        startActivity(new Intent(this, SignupActivity.class));
+        finish();
+        overridePendingTransition(R.anim.slide_in_left, android.R.anim.slide_out_right);
     }
 }

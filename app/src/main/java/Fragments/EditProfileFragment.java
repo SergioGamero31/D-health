@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.bumptech.glide.Glide;
@@ -31,8 +32,9 @@ public class EditProfileFragment extends Fragment {
     private CircleImageView profileImage;
 
     private EditText editName, editEmail, editPass, editNpass;
-    private EditText editAge, editSex, editHeight, editWeight;
+    private EditText editAge, editGender, editHeight, editWeight;
 
+    private Button btnpBack;
 
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
@@ -52,9 +54,11 @@ public class EditProfileFragment extends Fragment {
         editNpass = (EditText) view.findViewById(R.id.peditTextNpass);
 
         editAge = (EditText) view.findViewById(R.id.peditTextAge);
-        editSex = (EditText) view.findViewById(R.id.peditTextSex);
+        editGender = (EditText) view.findViewById(R.id.peditTextSex);
         editHeight = (EditText) view.findViewById(R.id.peditTextHeight);
         editWeight = (EditText) view.findViewById(R.id.peditTextWeight);
+
+        btnpBack = view.findViewById(R.id.btnpBack);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
@@ -67,6 +71,13 @@ public class EditProfileFragment extends Fragment {
         }
 
         displayUserInfo();
+
+        btnpBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
 
         return view;
     }
@@ -84,8 +95,17 @@ public class EditProfileFragment extends Fragment {
                 if(snapshot.exists()){
                     String name = snapshot.child("name").getValue().toString();
                     String email = snapshot.child("email").getValue().toString();
+                    String gender = snapshot.child("gender").getValue().toString();
+                    String age = snapshot.child("age").getValue().toString();
+                    String height = snapshot.child("height").getValue().toString();
+                    String weight = snapshot.child("weight").getValue().toString();
+
                     editName.setText(name);
                     editEmail.setText(email);
+                    editAge.setText(age);
+                    editGender.setText(gender);
+                    editHeight.setText(height);
+                    editWeight.setText(weight);
                 }
             }
 
@@ -95,9 +115,7 @@ public class EditProfileFragment extends Fragment {
             }
         });
     }
-    public void back(){
 
-    }
 
     public void changeStatusBarColor(){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

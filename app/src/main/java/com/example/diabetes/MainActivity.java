@@ -110,9 +110,6 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
         fragmentTransaction.replace(R.id.frame_container, new PedometerFragment());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-
-        //Intent intent = new Intent(this, ExcerciseActivity.class);
-        //startActivity(intent);
     }
 
     @Override

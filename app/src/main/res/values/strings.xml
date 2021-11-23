@@ -22,7 +22,8 @@
     <string name="signup_m_pass">Las contraseñas no coinciden</string>
     <string name="signup_m_pass2">La contraseña debe tener al menos 6 caracteres</string>
 
-    <string name="signdata_message">Necesitamos \nmás información \nantes de empezar</string>
+    <string name="signdata_message">Necesitamos \nalgunos \ndatos antes \nde empezar</string>
+    <string name="signdata_link">Volver</string>
     <string name="signdata_gender">Sexo</string>
     <string name="signdata_age">Edad</string>
     <string name="signdata_height">Talla</string>
@@ -41,7 +42,12 @@
     <string name="signup_incorrect">No se pudieron crear los datos correctamente</string>
     <string name="signup_error">Usuario no registrado</string>
 
-    <string name="pedo_message">No se encontró el sensor" </string>
+    <string name="pedo_message">No se encontró el sensor"</string>
+
+    <string name="glucose_error">No se registró la glucosa"</string>
+    <string name="glucose_message">Glucosa registrada</string>
+    <string name="text_reg_glucose">Registrar Glucosa</string>
+    <string name="glucose_button">Confirmar</string>
 
     <string name="editp_profile">Perfil</string>
     <string name="editp_save">Guardar</string>
