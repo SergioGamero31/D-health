@@ -49,8 +49,7 @@
                 <CalendarView
                     android:id="@+id/calendar"
                     android:layout_width="match_parent"
-                    android:layout_height="320dp">
-                </CalendarView>
+                    android:layout_height="320dp"></CalendarView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -61,8 +60,8 @@
                         android:id="@+id/txDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Su Fecha Registrada"
                         android:layout_marginBottom="10dp"
+                        android:text="Su Fecha Registrada"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -70,17 +69,17 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp">
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/textView5"
+                        style="@style/viewParent.headerText.NoMode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        style="@style/viewParent.headerText.NoMode"
                         android:text="Registrar Glucosa"
                         android:textSize="17sp"
                         android:textStyle="bold" />
@@ -88,8 +87,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="25dp">
+                        android:layout_marginBottom="25dp"
+                        android:orientation="horizontal">
 
                         <EditText
                             android:id="@+id/editTextGlucosa"
@@ -104,7 +103,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:entries="@array/glucosa"
-                            android:paddingLeft="5dp"/>
+                            android:paddingLeft="5dp" />
 
                     </LinearLayout>
 
@@ -120,7 +119,7 @@
                         style="@style/loginButton"
                         android:layout_gravity="center_horizontal"
                         android:text="Confirmar"
-                        app:initialCornerAngle="27dp"/>
+                        app:initialCornerAngle="27dp" />
 
                 </LinearLayout>
 

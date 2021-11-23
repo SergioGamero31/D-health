@@ -11,4 +11,9 @@
         <item>mmol/L</item>
     </array>
 
+    <array name="gender">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </array>
+
 </resources>

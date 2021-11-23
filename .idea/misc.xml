@@ -40,6 +40,7 @@
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_arrow.xml" value="0.2703125" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_back_img.xml" value="0.2703125" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_forum.xml" value="0.2703125" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_login_hero.xml" value="0.2703125" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_medical_care.xml" value="0.2703125" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_more.xml" value="0.2703125" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/drawable/ic_register_hero.xml" value="0.264" />
@@ -51,11 +52,14 @@
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_forum.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_glucosa.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_main.xml" value="0.264" />
-        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_medicine.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_medicine.xml" value="0.264" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_nutrition.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_pedometer.xml" value="0.264" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/fragment_signup.xml" value="0.264" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/login_activity.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/main_activity.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/on_boarding_activity.xml" value="0.264" />
+        <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/sign_data_activity.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/signup_activity.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/slider_layout.xml" value="0.264" />
         <entry key="..\:/Users/axexo/StudioProjects/D-health/app/src/main/res/layout/splash_activity.xml" value="0.25416666666666665" />

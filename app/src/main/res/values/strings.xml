@@ -5,7 +5,6 @@
     <string name="fb_login_protocol_scheme">fb857957511817240</string>
 
     <string name="login_message">¿Ya tienes \nuna cuenta?</string>
-
     <string name="login_email_hint">Email</string>
     <string name="login_password_hint">Contraseña</string>
     <string name="login_button">Ingresar</string>
@@ -22,6 +21,17 @@
     <string name="signup_m_fields">Debe completar los campos</string>
     <string name="signup_m_pass">Las contraseñas no coinciden</string>
     <string name="signup_m_pass2">La contraseña debe tener al menos 6 caracteres</string>
+
+    <string name="signdata_message">Necesitamos \nmás información \nantes de empezar</string>
+    <string name="signdata_gender">Sexo</string>
+    <string name="signdata_age">Edad</string>
+    <string name="signdata_height">Talla</string>
+    <string name="signdata_weight">Peso</string>
+    <string name="signdata_button">Continuar</string>
+
+    <string name="error_age">Ingrese una edad válida</string>
+    <string name="error_weight">Ingrese un peso válido</string>
+    <string name="error_height">Ingrese una altura válida</string>
 
     <string name="error_login"> Error al iniciar sesión</string>
     <string name="firebase_error">No se pudo iniciar sesión</string>
@@ -49,5 +59,6 @@
     <string name="desc_2">Anashe2</string>
     <string name="desc_3">Anashe3</string>
     <string name="desc_4">Anashe4</string>
+
 
 </resources>

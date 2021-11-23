@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -23,6 +25,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import Fragments.PedometerFragment;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -74,33 +78,11 @@ public class SignupActivity extends AppCompatActivity {
         });
     }
     private void registerUser(){
-        mAuth.createUserWithEmailAndPassword(remail, rpassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    Map<String, Object> map = new HashMap<>();
-                    map.put("name", rname);
-                    map.put("email", remail);
-                    map.put("password", rpassword);
-
-                    String id = mAuth.getCurrentUser().getUid();
-
-                    mDatabase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task2) {
-                            if(task2.isSuccessful()){
-                                startActivity(new Intent(SignupActivity.this, LoginActivity.class));
-                                finish();
-                            }else{
-                                Toast.makeText(SignupActivity.this, R.string.signup_incorrect, Toast.LENGTH_LONG).show();
-                            }
-                        }
-                    });
-                }else {
-                    Toast.makeText(SignupActivity.this, R.string.signup_error, Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        Intent intent = new Intent(this, SignData.class);
+        intent.putExtra("name", rname);
+        intent.putExtra("email", remail);
+        intent.putExtra("password", rpassword);
+        startActivity(intent);
     }
    public void changeStatusBarColor(){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
