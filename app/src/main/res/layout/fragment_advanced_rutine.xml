@@ -9,14 +9,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="25dp">
+        android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_width="360dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/excersice3">
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:background="@drawable/exercise3">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -33,7 +31,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
-            android:scrollbars="none">
+            android:scrollbars="none"
+            android:padding="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,7 +45,6 @@
                     android:onClick="flexiones"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:layout_marginTop="20dp"
                     android:background="@drawable/dep_background"
                     android:elevation="10dp"
                     app:cardCornerRadius="15dp">
