@@ -64,7 +64,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
         sliderImage.setImageResource(images[position]);
         sliderTitle.setText(headings[position]);
-        sliderDesc.setText(headings[position]);
+        sliderDesc.setText(desc[position]);
 
         container.addView(view);
 

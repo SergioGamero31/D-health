@@ -58,15 +58,15 @@
     <string name="editp_height_hint">Talla</string>
     <string name="editp_weight_hint">Peso</string>
 
-    <string name="heading_1">Nashe1</string>
-    <string name="heading_2">Nashe2</string>
-    <string name="heading_3">Nashe3</string>
-    <string name="heading_4">Nashe4</string>
+    <string name="heading_1">Control de tu glucosa</string>
+    <string name="heading_2">Ejercitate según tu nivel</string>
+    <string name="heading_3">Recuerda que medicamentos tomar</string>
+    <string name="heading_4">Observa tu progreso</string>
 
-    <string name="desc_1">Anashe1</string>
-    <string name="desc_2">Anashe2</string>
-    <string name="desc_3">Anashe3</string>
-    <string name="desc_4">Anashe4</string>
+    <string name="desc_1">Registra tu glucosa en mg/dL o mml/L</string>
+    <string name="desc_2">Lleva un control de tus pasos y ejercitate con nuestras rutinas</string>
+    <string name="desc_3">Programa recordatorios para tu medicación</string>
+    <string name="desc_4">Estadísticas de tu progreso por día, semana, mes y año</string>
 
     <string name="pose1">Tip: hacer curl de bíceps, extensiones de tríceps en polea alta, ayudan a hacer más y mejores flexiones.</string>
 
