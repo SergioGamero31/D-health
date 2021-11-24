@@ -116,7 +116,6 @@ public class EditProfileFragment extends Fragment {
         });
     }
 
-
     public void changeStatusBarColor(){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 

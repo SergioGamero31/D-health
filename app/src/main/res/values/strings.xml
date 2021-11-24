@@ -43,6 +43,8 @@
     <string name="signup_error">Usuario no registrado</string>
 
     <string name="pedo_message">No se encontró el sensor"</string>
+    <string name="pedo_tab1">Podometro</string>
+    <string name="pedo_tab2">Rutinas</string>
 
     <string name="glucose_error">No se registró la glucosa"</string>
     <string name="glucose_message">Glucosa registrada</string>
@@ -67,4 +69,5 @@
     <string name="desc_4">Anashe4</string>
 
     <string name="pose1">Tip: hacer curl de bíceps, extensiones de tríceps en polea alta, ayudan a hacer más y mejores flexiones.</string>
+
 </resources>

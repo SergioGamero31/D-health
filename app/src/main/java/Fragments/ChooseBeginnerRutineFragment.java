@@ -87,7 +87,7 @@ public class ChooseBeginnerRutineFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        layoutView = inflater.inflate(R.layout.fragment_rutine, container, false);
+        //layoutView = inflater.inflate(R.layout.fragment_rutine, container, false);
         String value = this.getArguments().getString("key");
         int data = Integer.parseInt(value);
         switch (data) {

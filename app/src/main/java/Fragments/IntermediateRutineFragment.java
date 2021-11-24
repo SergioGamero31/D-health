@@ -1,5 +1,7 @@
 package Fragments;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,63 +10,26 @@ import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.example.diabetes.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link IntermediateRutineFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class IntermediateRutineFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     private androidx.cardview.widget.CardView flexiones, crunch, sentadillas, plank, lunges;
     View layoutView;
     FragmentManager fragmentManager;
 
-    public IntermediateRutineFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment IntermediateRutineFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static IntermediateRutineFragment newInstance(String param1, String param2) {
         IntermediateRutineFragment fragment = new IntermediateRutineFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         layoutView = inflater.inflate(R.layout.fragment_intermediate_rutine, container, false);
         flexiones = (androidx.cardview.widget.CardView) layoutView.findViewById(R.id.flexiones);
@@ -72,6 +37,8 @@ public class IntermediateRutineFragment extends Fragment {
         sentadillas = (androidx.cardview.widget.CardView) layoutView.findViewById(R.id.sentadillas);
         plank = (androidx.cardview.widget.CardView) layoutView.findViewById(R.id.plank);
         lunges = (androidx.cardview.widget.CardView) layoutView.findViewById(R.id.lunges);
+
+        changeStatusBarColor();
 
         flexiones.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,5 +96,14 @@ public class IntermediateRutineFragment extends Fragment {
             }
         });
         return layoutView;
+    }
+    public void changeStatusBarColor(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+            Window window = getActivity().getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(Color.TRANSPARENT);
+        }
     }
 }

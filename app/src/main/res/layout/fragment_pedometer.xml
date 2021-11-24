@@ -17,30 +17,22 @@
             android:background="@drawable/podo_background">
 
             <RelativeLayout
+                android:id="@+id/progress_Layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Button
-                    android:id="@+id/btngBack"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/ic_arrow" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp">
 
                 <com.mikhaellopez.circularprogressbar.CircularProgressBar
                     android:id="@+id/cProgressBar"
-                    android:layout_width="225dp"
-                    android:layout_height="225dp"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
                     android:layout_centerInParent="true"
-                    android:layout_marginTop="70dp"
                     app:cpb_background_progressbar_color="@color/colorAccentLight2"
-                    app:cpb_background_progressbar_width="17dp"
+                    app:cpb_background_progressbar_width="14dp"
                     app:cpb_progress_direction="to_right"
                     app:cpb_progress_max="2500"
                     app:cpb_progressbar_color="@color/login_bk_color"
-                    app:cpb_progressbar_width="17dp"
+                    app:cpb_progressbar_width="14dp"
                     app:cpb_round_border="false" />
 
                 <TextView
@@ -49,18 +41,18 @@
                     android:layout_centerInParent="true"
                     android:text="0"
                     android:textColor="@color/login_bk_color"
-                    android:textSize="35sp" />
+                    android:textSize="30sp" />
 
                 <TextView
                     android:id="@+id/txmaxStep"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txstepCounter"
-                    android:layout_marginTop="150dp"
+                    android:layout_marginTop="100dp"
                     android:gravity="center"
                     android:text="2500"
                     android:textColor="@color/login_bk_color"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
 
             </RelativeLayout>
 
@@ -69,10 +61,11 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_marginTop="330dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="30dp"
+                android:layout_below="@id/progress_Layout">
 
                 <LinearLayout
                     android:id="@+id/linearCal"
@@ -114,8 +107,8 @@
                     android:id="@+id/linearTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_centerInParent="true"
+                    android:orientation="vertical"
                     android:paddingHorizontal="20dp">
 
                     <ImageView

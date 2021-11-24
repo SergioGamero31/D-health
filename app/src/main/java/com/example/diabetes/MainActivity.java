@@ -15,6 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import Fragments.ExerciseFragment;
 import Fragments.ForumFragment;
 import Fragments.GlucosaFragment;
 import Fragments.MainFragment;
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements IComDashboard {
     public void doExcercise() {
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_container, new PedometerFragment());
+        fragmentTransaction.replace(R.id.frame_container, new ExerciseFragment());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }

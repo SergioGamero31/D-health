@@ -4,85 +4,80 @@
     android:layout_height="match_parent"
     tools:context="Fragments.RutineMenuFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="25dp">
-        <!-- <TextView
-             style="@style/viewParent.headerText.NoMode"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:text="Entrenamiento"
-             android:textSize="20sp"
-             android:textStyle="bold" />-->
-                <LinearLayout
-                    android:layout_width="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/beginner"
+                android:onClick="beginner"
+                android:layout_width="360dp"
+                android:layout_height="200dp"
+                android:background="@drawable/excersice2">
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <RelativeLayout
-                        android:id="@+id/beginner"
-                        android:onClick="beginner"
-                        android:layout_width="360dp"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/excersice2">
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="Principiante"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="25sp"
+                    android:textStyle="bold">
+                </TextView>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="20dp"
-                            android:text="Principiante"
-                            android:textColor="@color/whiteTextColor"
-                            android:textSize="25sp"
-                            android:textStyle="bold">
-                        </TextView>
-                    </RelativeLayout>
+            </RelativeLayout>
 
-                    <RelativeLayout
-                        android:id="@+id/intermediate"
-                        android:onClick="intermediate"
-                        android:layout_width="360dp"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/excersice1">
+            <RelativeLayout
+                android:id="@+id/intermediate"
+                android:onClick="intermediate"
+                android:layout_width="360dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/excersice1">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="20dp"
-                            android:text="Intermedio"
-                            android:textColor="@color/whiteTextColor"
-                            android:textSize="25sp"
-                            android:textStyle="bold">
-                        </TextView>
-                    </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="Intermedio"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="25sp"
+                    android:textStyle="bold">
+                </TextView>
 
-                    <RelativeLayout
-                        android:id="@+id/advanced"
-                        android:onClick="advanced"
-                        android:layout_width="360dp"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/excersice3">
+            </RelativeLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="20dp"
-                            android:text="Avanzado"
-                            android:textColor="@color/whiteTextColor"
-                            android:textSize="25sp"
-                            android:textStyle="bold">
-                        </TextView>
-                    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/advanced"
+                android:onClick="advanced"
+                android:layout_width="360dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/excersice3">
 
-                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="Avanzado"
+                    android:textColor="@color/whiteTextColor"
+                    android:textSize="25sp"
+                    android:textStyle="bold">
+                </TextView>
+            </RelativeLayout>
 
-            </LinearLayout>
-        </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.diabetes.R;
+import com.google.android.material.tabs.TabLayout;
 import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
 public class PedometerFragment extends Fragment implements SensorEventListener {
@@ -69,7 +70,6 @@ public class PedometerFragment extends Fragment implements SensorEventListener {
         resetSteps();
         return view;
     }
-
 
     @Override
     public void onSensorChanged(SensorEvent event) {
